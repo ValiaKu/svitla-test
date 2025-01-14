@@ -1,0 +1,26 @@
+{
+	"builds": [
+		{
+			"src": "apps/app-menu/package.json",
+			"use": "@vercel/static-build"
+		},
+		{
+			"src": "apps/app-logo/package.json",
+			"use": "@vercel/static-build"
+		},
+		{
+			"src": "apps/app-todos/package.json",
+			"use": "@vercel/static-build"
+		},
+		{
+			"src": "apps/app-website/package.json",
+			"use": "@vercel/static-build"
+		}
+	],
+	"routes": [
+		{ "src": "/(.*)", "dest": "apps/app-menu/.svelte-kit/output/client/$1" },
+		{ "src": "/(.*)", "dest": "apps/app-logo/.svelte-kit/output/client/$1" },
+		{ "src": "/(.*)", "dest": "apps/app-todos/.svelte-kit/output/client/$1" },
+		{ "src": "/(.*)", "dest": "apps/app-website/.svelte-kit/output/client/$1" }
+	]
+}

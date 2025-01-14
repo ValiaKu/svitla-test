@@ -1,0 +1,30 @@
+{
+	"name": "my-repo-test",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "NODE_ENV=production turbo run build",
+		"lint": "turbo run lint",
+		"test": "turbo run test",
+		"preview": "vite preview"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"description": "",
+	"packageManager": "npm@9.8.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"devDependencies": {
+		"turbo": "^2.3.3"
+	},
+	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/adapter-vercel": "^5.5.2",
+		"vite": "^5.4.11"
+	}
+}
